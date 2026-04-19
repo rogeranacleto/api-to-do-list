@@ -34,7 +34,7 @@ Este repositório é um template no GitHub. Para usá-lo:
 
 ## Configuração
 
-1. Crie um arquivo `.env` na raiz do projeto com base no arquivo `.env-example`:
+1. Crie um arquivo `.env` na raiz do projeto com base no arquivo `.env.example`:
    ```env
    PORT=3030
    POSTGRES_USER=seu_usuario
