@@ -1,0 +1,65 @@
+{
+  "info": {
+    "name": "Todo API",
+    "_postman_id": "12345",
+    "description": "Collection para testar API ToDo",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Criar Usuário",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Maria\",\n  \"email\": \"maria@email.com\",\n  \"password\": \"123456\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3030/users",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3030",
+          "path": ["users"]
+        }
+      }
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"maria@email.com\",\n  \"password\": \"123456\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3030/auth/login",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3030",
+          "path": ["auth", "login"]
+        }
+      }
+    },
+    {
+      "name": "Listar Tarefas",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer SEU_TOKEN"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3030/tasks",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3030",
+          "path": ["tasks"]
+        }
+      }
+    }
+  ]
+}
